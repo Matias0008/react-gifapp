@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  width: 100%;
+}
+
+#container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.title {
+  font-size: clamp(2rem, 10vw, 5rem);
+  padding: 2rem 2rem 1rem 0px;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 6vw, 3rem);
+  padding: 2rem 2rem 1rem 0px;
+}
+
+.nocategories {
+  font-size: clamp(1rem, 4vw, 2rem);
+  padding: 10px 0px;
+}
+
+form {
+  padding-bottom: 0.8rem;
+}
+
+input { 
+  width: 100%;
+  font-size: 1.4rem;
+  color: grey;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  background-color: #F6F4F4;
+  border-radius: 2px;
+  transition: color 4s ease;
+}
+
+input::placeholder {
+  color: grey;
+  transition: color 0.5s ease;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.buttonLimpiar {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card {
+  border: 1px solid gainsboro;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+
+.card img {
+  height: 280px;
+  object-fit: cover;
+  width: 450px;
+}
+
+.card p {
+  padding: 8px 5px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+
+@media (max-width: 1000px) {
+  .card-grid {
+    justify-content: center;
+  }
+
+  body {
+    font-size: 11px;
+  }
+}
