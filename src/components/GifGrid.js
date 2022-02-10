@@ -7,6 +7,13 @@ export const GifGrid = ( { category } ) => {
 
     const { data:images, loading } = useFetchGifs( category );
 
+    const documentTitle = document.querySelector('.title');
+
+    console.log(loading)
+    if (loading == false) {
+        documentTitle.classList.add('padding-top')
+    }
+
     return (
         <>
             <h3 className='subtitle animate__fadeIn'>{ category }</h3>
